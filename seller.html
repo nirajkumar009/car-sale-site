@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+  }
+  header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  nav ul li {
+    display: inline;
+    margin-right: 20px;
+  }
+  nav ul li a {
+    color: #333;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  nav ul li a:hover {
+    color: #007bff;
+  }
+  form {
+    width: 50%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+  }
+  input, select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  input:focus, select:focus {
+    border-color: #007bff;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var inputs = document.querySelectorAll('input, select');
+    inputs.forEach(function(input) {
+      input.addEventListener('focus', function() {
+        this.style.backgroundColor = '#f9f9f9';
+      });
+      input.addEventListener('blur', function() {
+        this.style.backgroundColor = '#fff';
+      });
+    });
+  });
+</script>
+</head>
+<body>
+<header>
+  <h1>Seller Page</h1>
+</header>
+<nav>
+  <ul>
+    <li><a href="#">Login</a></li>
+    <li><a href="#">Add Car</a></li>
+  </ul>
+</nav>
+<form>
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" required>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" required>
+  <button type="submit">Login</button>
+</form>
+</body>
+</html>

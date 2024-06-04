@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Search Page</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  header {
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  form {
+    width: 60%;
+    margin: 50px auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    animation: fadeInDown 1s ease;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: #333;
+    font-size: 18px;
+  }
+  input[type="text"], select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  input[type="text"]:focus, select:focus {
+    border-color: #007bff;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  @keyframes fadeInDown {
+    from {
+      opacity: 0;
+      transform: translateY(-50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+<script>
+  function searchCars() {
+    var model = document.getElementById('model').value;
+    var location = document.getElementById('location').value;
+    
+    // Implement your search functionality here
+    
+    // For demo purposes, let's log the search query
+    console.log('Searching for cars with model:', model, 'and location:', location);
+  }
+</script>
+</head>
+<body>
+<header>
+  <h1>Search Page</h1>
+</header>
+<form onsubmit="event.preventDefault(); searchCars();">
+  <label for="model">Car Model</label>
+  <input type="text" id="model" name="model" placeholder="Enter car model">
+  <label for="location">Location</label>
+  <input type="text" id="location" name="location" placeholder="Enter location">
+  <button type="submit">Search</button>
+</form>
+</body>
+</html>

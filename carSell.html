@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seller Registration</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
+  label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var inputs = document.querySelectorAll('input, select');
+    inputs.forEach(function(input) {
+      input.addEventListener('focus', function() {
+        this.style.backgroundColor = 'yellow';
+      });
+      input.addEventListener('blur', function() {
+        this.style.backgroundColor = 'white';
+      });
+    });
+    var button = document.querySelector('button');
+    button.addEventListener('mouseover', function() {
+      this.style.backgroundColor = '#0056b3';
+    });
+    button.addEventListener('mouseout', function() {
+      this.style.backgroundColor = '#007bff';
+    });
+  });
+</script>
+</head>
+<body>
+<header>
+  <h1>Seller Registration</h1>
+</header>
+<form>
+  <label for="name">Name</label>
+  <input type="text" id="name" name="name" required>
+  <label for="address">Address</label>
+  <input type="text" id="address" name="address" required>
+  <label for="phone">Phone Number</label>
+  <input type="tel" id="phone" name="phone" required>
+  <label for="email">Email Address</label>
+  <input type="email" id="email" name="email" required>
+  <label for="username">Username</label>
+  <input type="text" id="username" name="username" pattern="[a-zA-Z]+" required>
+  <label for="password">Password</label>
+  <input type="password" id="password" name="password" pattern="^(?=.*[a-zA-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{6,10}$" required>
+  <button type="submit">Register</button>
+</form>
+</body>
+</html>
